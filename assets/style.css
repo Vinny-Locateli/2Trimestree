@@ -1,0 +1,116 @@
+# 2Trimestree: raiz {
+    --texto-cor :  # DBE4EF ;
+    --card-front-color :  # 144480 ;
+    --card-back-color :  # 00F4BF ;
+}
+
+corpo {
+    fundo :  url ( 'img/bg-desktop.webp' );
+    família de fontes : Bai Jamjuree;
+}
+
+# contêiner {
+    exibição : flexível;
+    flex-wrap : envolver;
+    justify-content : espaço-entre;
+    preenchimento :  4 rem ;
+    lacuna :  3 rem ;
+}
+
+. cartao {
+    margem :  1 rem  1 rem ;
+    altura :  20 rem ;
+    flex-grow :  1 ;
+    flex-basis :  calc ( 33 %  -  6 rem );
+}
+
+. cartao__conteudo {
+    cor de fundo :  var ( --card-front-color );
+    alinhamento de texto : centro;
+    /* cor de fundo: água-marinha; */
+    altura :  100 % ;
+    estilo de transformação : preservar-3d;
+    transição : transformação de 300 ms de entrada e saída;
+}
+
+. cartao__conteudo  h3 {
+    cor :  var ( --text-color );
+    borda :  1 px sólido var ( --text-color );
+    alinhamento de texto : esquerda;
+    preenchimento :  0,5 rem ;
+    posição : absoluta;
+    margem :  0,6 rem ;
+    raio da borda :  0,6 rem ;
+    tamanho da fonte :  1 vw ;
+    backface-visibility : oculto;
+}
+
+. cartao__conteudo  p {
+    margem superior :  1 rem ;
+    preenchimento :  2 rem ;
+    margem superior :  4 rem ;
+    tamanho da fonte :  1,4 vw ;
+}
+
+. cartao__conteudo__pergunta  p {
+    cor :  var ( --text-color );
+    espessura da fonte :  500 ;
+}
+
+. cartao__conteudo__resposta  p {
+    cor :  var ( --card-back-color );
+    espessura da fonte :  700 ;
+}
+
+. cartao . ativo . cartao__conteudo {
+    transformar :  girarY ( 180 graus );
+}
+
+. cartao__conteudo__pergunta ,
+. cartao__conteudo__resposta {
+    backface-visibility : oculto;
+    posição : absoluta;
+    altura :  100 % ;
+    largura :  100 % ;
+    dimensionamento de caixa : caixa de borda;
+}
+
+. cartao__conteudo__resposta {
+    transformar :  girarY ( 180 graus );
+    cor de fundo :  rgba ( 0 ,  244 ,  191 ,  0,2 );
+    borda :  4 px sólido var ( --card-back-color );
+}
+
+rodapé {
+    cor de fundo : preto;
+    cor : branco;
+    posição : fixa;
+    fundo :  0 ;
+    largura :  100 % ;
+    altura :  2 rem ;
+}
+
+rodapé  p {
+    alinhamento de texto : centro;
+    tamanho da fonte :  0,6 rem ;
+    margem superior :  0,5 rem ;
+}
+
+@media ( largura máxima :  560 px ) {
+
+    corpo {
+        fundo :  url ( 'img/bg-mobile.webp' ) , capa sem repetição;
+    }
+
+    . cartao {
+        flexão :  1  0  calc ( 100 %  -  1 rem )
+    }
+
+    . cartao__conteudo  h3 {
+        tamanho da fonte :  3 vw ;
+    }
+
+    . cartao__conteudo  p {
+        tamanho da fonte :  3,8 vw ;
+    }
+}
